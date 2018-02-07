@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RegisterPage {
   @ViewChild('username') user;
-  @ViewChild('Password') password;
+  @ViewChild('password') password;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -23,7 +23,7 @@ export class RegisterPage {
     console.log('ionViewDidLoad RegisterPage');
   }
   registerUser() {
-    console.log('would register user with', this.password.value);
+    console.log('would register user with', this.user.value, this.password.value);
 
   }
 }

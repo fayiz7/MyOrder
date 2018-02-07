@@ -15,8 +15,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-@ViewChild('username') user;
-@ViewChild('Password') password;
+  @ViewChild('username') user;
+  @ViewChild('password') password;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -24,8 +24,8 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-signInUser(){
+  signInUser() {
 
-  console.log('Would sigin in with ', this.user.value, this.password.value);
-}
+    console.log('Would sigin in with ', this.user.value, this.password.value);
+  }
 }
