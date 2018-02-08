@@ -8,6 +8,19 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {LoginPage} from '../pages/login/login';
 import {RegisterPage} from '../pages/register/register';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+
+const firebaseAuth = {
+    apiKey: "AIzaSyCwZdWRaz_Pq6cuOsX5cilzUrJqtzbvWrs",
+    authDomain: "test-360ee.firebaseapp.com",
+    databaseURL: "https://test-360ee.firebaseio.com",
+    projectId: "test-360ee",
+    storageBucket: "test-360ee.appspot.com",
+    messagingSenderId: "379800977798"
+  };
+
 
 @NgModule({
   declarations: [
@@ -18,7 +31,10 @@ import {RegisterPage} from '../pages/register/register';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseAuth),
+    AngularFireAuthModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
