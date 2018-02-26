@@ -20,8 +20,10 @@ export class RegisterPage {
 
   @ViewChild('username') user;
   @ViewChild('password') password;
+  @ViewChild('mobile') mobile;
+
   constructor(private fdb: AngularFireDatabase, private alertCtrl: AlertController, private fire: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
-    this.fdb.list("/allUsers/")
+    this.fdb.list("/allUsers/").subscribe
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
@@ -39,6 +41,7 @@ export class RegisterPage {
     this.fire.auth.createUserWithEmailAndPassword(this.user.value, this.password.value)
       .then(data => {
         console.log('got data ', data);
+        this.fdb.list("/allUsers/").push(this.mobile);
         this.alert('Registred account with username: ' + this.user.value);
       })
       .catch(error => {
