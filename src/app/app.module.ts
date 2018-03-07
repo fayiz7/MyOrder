@@ -11,6 +11,7 @@ import {LoggedinPage} from '../pages/loggedin/loggedin';
 import {RegisterPage} from '../pages/register/register';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 const firebaseAuth = {
@@ -21,6 +22,11 @@ const firebaseAuth = {
     storageBucket: "test-360ee.appspot.com",
     messagingSenderId: "379800977798"
   };
+
+
+
+
+
 
 
 @NgModule({
@@ -35,7 +41,8 @@ const firebaseAuth = {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseAuth),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
 
   ],
   bootstrap: [IonicApp],
