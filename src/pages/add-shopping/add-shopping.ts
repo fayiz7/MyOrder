@@ -8,7 +8,7 @@ import {ShoppingItem} from '../../models/shopping-item/shopping-item.interface';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-add-shopping',
   templateUrl: 'add-shopping.html',
@@ -21,5 +21,7 @@ shoppingItem = {} as ShoppingItem;
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddShoppingPage');
   }
-
+  addShoppingItem(shoppingItem: ShoppingItem) {
+    console.log(shoppingItem);
+  }
 }

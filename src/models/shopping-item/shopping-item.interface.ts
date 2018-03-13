@@ -1,4 +1,7 @@
 export interface ShoppingItem{
-  itemName: string;
+  itemId:string;
   itemNumber: number;
+  itemName: string;
+  itemPrice:number;
+
 }
