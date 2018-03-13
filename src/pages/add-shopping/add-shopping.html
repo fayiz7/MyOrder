@@ -10,15 +10,15 @@
 <ion-content padding>
   <ion-item>
     <ion-label floating>Item Id</ion-label>
-    <ion-input type="text" [(ngModel)]="shoppingItem.itemId" > </ion-input>
+    <ion-input type="text" [(ngModel)]="shoppingItem.itemId"> </ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>Item Name</ion-label>
-    <ion-input type="text" [(ngModel)]="shoppingItem.itemName" > </ion-input>
+    <ion-input type="text" [(ngModel)]="shoppingItem.itemName"> </ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Quantety</ion-label>
-    <ion-input type="number" [(ngModel)]="shoppingItem.itemNumber"> </ion-input>
+    <ion-label floating>Number</ion-label>
+    <ion-input type="number" [(ngModel)]> </ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>Item Price</ion-label>
@@ -26,5 +26,5 @@
   </ion-item>
 
 
-  <button ion-button block (click)="addShoppingItem(shoppingItem)" >AddItem</button>
+  <button ion-button block (click)="addShoppingItem(shoppingItem)">AddItem</button>
 </ion-content>
