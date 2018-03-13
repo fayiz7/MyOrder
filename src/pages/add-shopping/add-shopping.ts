@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ShoppingItem } from '../../models/shopping-item/shopping-item.interface';
-import { AngularFireDatabase,FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import{FirebaseListObservable} from 'angularfire2/database-deprecated';
+
 
 
 
