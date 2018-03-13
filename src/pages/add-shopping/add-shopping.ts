@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ShoppingItem } from '../../models/shopping-item/shopping-item.interface';
-/**
- * Generated class for the AddShoppingPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AngularFireDatabase,FirebaseListObservable } from 'angularfire2/database';
+
 
 
 @Component({
@@ -14,14 +10,24 @@ import { ShoppingItem } from '../../models/shopping-item/shopping-item.interface
   templateUrl: 'add-shopping.html',
 })
 export class AddShoppingPage {
+  // Creating new obj
   shoppingItem = {} as ShoppingItem;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  //$ sign because its observable
+  shoppingItemRef$: FirebaseListObservable<ShoppingItem[]>
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private databse: AngularFireDatabase) {
+    this.shoppingItemRef$ = this.databse.list('shopping-list');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AddShoppingPage');
-  }
+
   addShoppingItem(shoppingItem: ShoppingItem) {
-    console.log(shoppingItem);
+    this.shoppingItemRef$.push({
+      itemName: this.shoppingItem.itemName,
+      itemNumber: this.shoppingItem.itemNumber,
+      itemId: this.shoppingItem.itemId,
+      itemPrice: this.shoppingItem.itemPrice
+    });
   }
+
 }
