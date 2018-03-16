@@ -17,7 +17,7 @@ import {ShoppingItem} from '../../models/shopping-item/shopping-item.interface';
  */
 >>>>>>> 0163938ba9de5a1a8f4687cdefa09d707e833cb5
 
-
+@IonicPage()
 @Component({
   selector: 'page-add-shopping',
   templateUrl: 'add-shopping.html',
@@ -39,6 +39,7 @@ shoppingItem = {} as ShoppingItem;
     this.shoppingItemRef$ = this.databse.list('shopping-list');
   }
 
+<<<<<<< HEAD
 
   addShoppingItem(shoppingItem: ShoppingItem) {
     this.shoppingItemRef$.push({
@@ -52,5 +53,7 @@ shoppingItem = {} as ShoppingItem;
 
 }
 =======
+=======
+>>>>>>> parent of 0163938... Resolved All Merge Conflicts.
 }
 >>>>>>> 0163938ba9de5a1a8f4687cdefa09d707e833cb5
