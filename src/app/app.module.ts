@@ -26,6 +26,11 @@ const firebaseAuth = {
   };
 
 
+
+
+
+
+
 @NgModule({
   declarations: [
     MyApp,
