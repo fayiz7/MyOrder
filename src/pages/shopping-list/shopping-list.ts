@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {AddShoppingPage} from '../add-shopping/add-shopping';
 import{FirebaseListObservable} from'angularfire2/database-deprecated';
 import { ShoppingItem } from '../../models/shopping-item/shopping-item.interface';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 @IonicPage()
 @Component({
   selector: 'page-shopping-list',

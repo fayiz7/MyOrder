@@ -13,7 +13,7 @@ import {ShoppingListPage} from '../pages/shopping-list/shopping-list';
 import {AddShoppingPage} from '../pages/add-shopping/add-shopping';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 
 
 const firebaseAuth = {
