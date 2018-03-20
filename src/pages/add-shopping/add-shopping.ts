@@ -23,8 +23,12 @@ export class AddShoppingPage {
 
   addShoppingItem(shoppingItem: ShoppingItem) {
     this.shoppingItemRef$.push({
+      itemId: this.shoppingItem.itemId,
       itemName: this.shoppingItem.itemName,
-      itemNumber: Number(this.shoppingItem.itemNumber)
+      itemNumber: Number(this.shoppingItem.itemNumber),
+      itemDesc: this.shoppingItem.itemDesc,
+      itemPrice: Number(this.shoppingItem.itemPrice)
+
     });
 
     //reset shoppingItem

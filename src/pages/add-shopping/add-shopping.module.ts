@@ -10,4 +10,4 @@ import { AddShoppingPage } from './add-shopping';
     IonicPageModule.forChild(AddShoppingPage),
   ],
 })
-export class AddShoppingPageModule {}
+export class AddShoppingPageModule { }

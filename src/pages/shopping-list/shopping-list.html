@@ -4,7 +4,7 @@
     <ion-title>Shopping List</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="navigateToAddShoppingPage()">
-        <ion-icon name ="add"> </ion-icon>
+        <ion-icon name="add"> </ion-icon>
       </button>
 
     </ion-buttons>
@@ -16,8 +16,12 @@
 <ion-content padding>
   <ion-list>
     <ion-item *ngFor="let item of shoppingListRef$ | async">
-        <h2>Item Name: {{item.itemName}}</h2>
-        <h3>Amount: {{item.itemNumber}}</h3>
+      <h2>Item ID: {{item.itemId}}</h2>
+      <h2>Item Name: {{item.itemName}}</h2>
+      <h3>Item Quantity: {{item.itemNumber}}</h3>
+      <h4>Description:{{item.itemDesc}}</h4>
+      <h4>Item Price:{{item.itemPrice}}</h4>
+
     </ion-item>
   </ion-list>
 
