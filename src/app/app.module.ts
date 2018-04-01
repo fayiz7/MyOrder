@@ -11,6 +11,7 @@ import {LoggedinPage} from '../pages/loggedin/loggedin';
 import {RegisterPage} from '../pages/register/register';
 import {ShoppingListPage} from '../pages/shopping-list/shopping-list';
 import {AddShoppingPage} from '../pages/add-shopping/add-shopping';
+import {BrowsePage} from '../pages/browse/browse';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
@@ -39,7 +40,8 @@ const firebaseAuth = {
     RegisterPage,
     LoggedinPage,
     ShoppingListPage,
-    AddShoppingPage
+    AddShoppingPage,
+    BrowsePage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ const firebaseAuth = {
     RegisterPage,
     LoggedinPage,
     ShoppingListPage,
-    AddShoppingPage
+    AddShoppingPage,
+    BrowsePage
   ],
   providers: [
     StatusBar,
