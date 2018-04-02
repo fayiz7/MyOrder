@@ -7,12 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Hey user!</ion-title>
+    <ion-title>Hey  {{email}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  {{email}}
+  your email is {{email}}
+  <button block ion-button (click)="browse()" item-left>Update your location</button>
+  <button block ion-button (click)="addItems()" item-left>Add items to your store</button>
+
+
 </ion-content>
