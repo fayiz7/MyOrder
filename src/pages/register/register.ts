@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { AngularFireDatabase } from 'angularfire2/database';
+//import { AngularFireDatabase } from 'angularfire2/database';
 
 /**
  * Generated class for the RegisterPage page.
@@ -16,13 +16,13 @@ import { AngularFireDatabase } from 'angularfire2/database';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-  arrData = []
+//  arrData = []
 
   @ViewChild('username') user;
   @ViewChild('password') password;
-  @ViewChild('mobile') mobile;
+//  @ViewChild('mobile') mobile;
 
-  constructor(private fdb: AngularFireDatabase, private alertCtrl: AlertController, private fire: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(/*private fdb: AngularFireDatabase,*/ private alertCtrl: AlertController, private fire: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
 
   }
   ionViewDidLoad() {
