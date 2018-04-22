@@ -1,9 +1,15 @@
+Node version: v8.9.4
+
+Cordova version: 8.0.0
+
+Config.xml file: 
+
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>MyOrder</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.8.102:8100" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -86,9 +92,20 @@
     <plugin name="com.synconset.imagepicker" spec="~2.1.10">
         <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="your usage message" />
     </plugin>
-    <allow-navigation href="http://192.168.8.102:8100" />
-    <allow-navigation href="http://10.24.226.227:8100" />
-    <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
     <plugin name="cordova-plugin-camera" spec="~4.0.2" />
+    <allow-navigation href="http://192.168.8.102:8100" />
     <engine name="android" spec="7.0.0" />
 </widget>
+
+
+Plugins: 
+
+com.synconset.imagepicker,cordova-plugin-camera,cordova-plugin-device,cordova-plugin-file,cordova-plugin-file-transfer,cordova-plugin-ionic-keyboard,cordova-plugin-ionic-webview,cordova-plugin-splashscreen,cordova-plugin-whitelist
+
+Error retrieving Android platform information: 
+Android SDK is not set up properly. Make sure that the Android SDK 'tools' and 'platform-tools' directories are in the PATH variable. 
+
+Error: cmd: Command failed with exit code 1 Error output:
+'android' is not recognized as an internal or external command,
+operable program or batch file.
+

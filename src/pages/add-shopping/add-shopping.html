@@ -34,7 +34,8 @@
     <ion-label floating>Item Price</ion-label>
     <ion-input type="Number" [(ngModel)]="shoppingItem.itemPrice"> </ion-input>
   </ion-item>
-
+  <button ion-button block (click)="pickImage()">Upload Image</button>
+  <!-- <ion-input  [(ngModel)]="shoppingItem.img" name="img" type="text" [readonly]="true" value="{{imgUrl}}"  ></ion-input> -->
 
   <button ion-button block (click)="addShoppingItem(shoppingItem)">AddItem</button>
 </ion-content>
