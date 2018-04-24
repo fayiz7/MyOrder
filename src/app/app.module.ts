@@ -20,7 +20,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { AgmCoreModule } from '@agm/core';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera } from '@ionic-native/camera';
-
+import { StoresService } from '../services/stores';
+import { DisplayStoresPage } from '../pages/display-stores/display-stores';
+import { StorePage } from '../pages/store/store';
 
 const firebaseAuth = {
   apiKey: "AIzaSyCwZdWRaz_Pq6cuOsX5cilzUrJqtzbvWrs",
@@ -30,12 +32,6 @@ const firebaseAuth = {
   storageBucket: "test-360ee.appspot.com",
   messagingSenderId: "379800977798"
 };
-
-
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -48,7 +44,9 @@ const firebaseAuth = {
     AddShoppingPage,
     InitiateStorePage,
     SetLocationPage,
-    BrowsePage
+    BrowsePage,
+    DisplayStoresPage,
+    StorePage
   ],
   imports: [
     BrowserModule,
@@ -72,13 +70,16 @@ const firebaseAuth = {
     AddShoppingPage,
     InitiateStorePage,
     SetLocationPage,
-    BrowsePage
+    BrowsePage,
+    DisplayStoresPage,
+    StorePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Geolocation,
     Camera,
+    StoresService,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

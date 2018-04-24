@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Stores List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let store of stores ; let i = index" (click)="onOpenStore(store,i)">
+    <img [src]="store.imageUrl">
+    <ion-card-content text-center>
+      <ion-card-title>
+        {{store.title}}
+      </ion-card-title>
+      <p>{{store.description}}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

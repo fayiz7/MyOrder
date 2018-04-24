@@ -5,6 +5,9 @@ import { SetLocationPage } from '../set-location/set-location';
 import { Location } from '../../models/location';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera } from '@ionic-native/camera';
+import { StoresService } from '../../services/stores';
+import { Title } from '@angular/platform-browser';
+import { DisplayStoresPage } from '../display-stores/display-stores';
 
 
 @IonicPage()
@@ -23,8 +26,9 @@ export class InitiateStorePage {
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     private geolocation: Geolocation,
-    private camera: Camera
-  ) {
+    private camera: Camera,
+    private soresService: StoresService,
+    private navCtrl: NavController) {
   }
 
   onOpenMap() {
@@ -80,5 +84,17 @@ export class InitiateStorePage {
         }
       )
 
+  }
+  onSubmit(form: NgForm) {
+    this.soresService.addStore(form.value.title, form.value.description, location, this.imageUrl);
+    form.reset();
+    this.location = {
+      lat: 21.489123,
+      lng: 39.245947
+    };
+    this.imageUrl = '';
+  }
+  onGoToDis() {
+    this.navCtrl.push(DisplayStoresPage);
   }
 }

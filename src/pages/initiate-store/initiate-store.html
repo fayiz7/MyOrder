@@ -61,9 +61,14 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <button ion-button color="secondary" block type="submit" [disabled]="!f.valid || !locationIsSet">
+          <button ion-button color="secondary" block type="submit" [disabled]="!f.valid || imageUrl == ''">
             Add My Store
           </button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <button ion-button color = "secondary" (click)="onGoToDis()">Display Stores</button>
         </ion-col>
       </ion-row>
     </ion-grid>
