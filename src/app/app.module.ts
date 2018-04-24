@@ -20,6 +20,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { AgmCoreModule } from '@agm/core';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera } from '@ionic-native/camera';
+import { EditShoppingItemPage } from '../pages/edit-shopping-item/edit-shopping-item';
 
 
 const firebaseAuth = {
@@ -48,7 +49,8 @@ const firebaseAuth = {
     AddShoppingPage,
     InitiateStorePage,
     SetLocationPage,
-    BrowsePage
+    BrowsePage,
+    EditShoppingItemPage
   ],
   imports: [
     BrowserModule,
@@ -72,7 +74,8 @@ const firebaseAuth = {
     AddShoppingPage,
     InitiateStorePage,
     SetLocationPage,
-    BrowsePage
+    BrowsePage,
+    EditShoppingItemPage
   ],
   providers: [
     StatusBar,

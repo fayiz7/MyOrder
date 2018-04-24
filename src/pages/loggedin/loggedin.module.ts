@@ -10,4 +10,4 @@ import { LoggedinPage } from './loggedin';
     IonicPageModule.forChild(LoggedinPage),
   ],
 })
-export class LoggedinPageModule {}
+export class LoggedinPageModule { }
