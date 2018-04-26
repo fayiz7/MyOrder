@@ -31,14 +31,14 @@ export class EditShoppingItemPage {
     const shoppingItemId = this.navParams.get('shoppingItemId');
     console.log(shoppingItemId);
     //set the scope of our Firebase object equal to our selected item
-    this.shoppingItemRef$ = this.database.object('shopping-list/${shoppingItemId}');
+    //this.shoppingItemRef$ = this.database.object('shopping-list/${shoppingItemId}');
 
     //subscribe to the object and assign the result to this.shoppingitem
-    this.shoppingItemRef$.subscribe(shoppingItem=> this.shoppingItem=shoppingItem);
+    //this.shoppingItemRef$.subscribe(shoppingItem=> this.shoppingItem=shoppingItem);
   }
 
   //update our firebase node with new item data
-  editShoppingItem(shoppingItem: ShoppingItem){this.shoppingItemRef$.update(shoppingItem);
+  /editShoppingItem(shoppingItem: ShoppingItem){this.shoppingItemRef$.update(shoppingItem);
 }
 
 
