@@ -37,6 +37,7 @@ export class EditShoppingItemPage {
     //this.shoppingItemRef$.subscribe(shoppingItem=> this.shoppingItem=shoppingItem);
   }
 
+  
   //update our firebase node with new item data
   //editShoppingItem(shoppingItem: ShoppingItem){this.shoppingItemRef$.update(shoppingItem);
 }
