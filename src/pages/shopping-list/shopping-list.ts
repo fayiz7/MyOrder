@@ -42,7 +42,7 @@ selectShoppingItem(shoppingItem: ShoppingItem){
         text: 'Edit',
         handler: () =>{
           //send the user to the editshoppingitempage and pass the key as a parameter
-          this.navCtrl.push(EditShoppingItemPage, {shoppingItemId: shoppingItem.$key});
+          //this.navCtrl.push(EditShoppingItemPage, {shoppingItemId: shoppingItem.$key});
 
         }
       },
@@ -51,7 +51,7 @@ selectShoppingItem(shoppingItem: ShoppingItem){
         role: 'destructive',
         handler: () => {
           //delete the current shoppingItem
-          //this.shoppingListRef$.remove(shoppingItem.$key);
+          this.shoppingListRef$.remove(shoppingItem.$key);
         }
       },
       {
