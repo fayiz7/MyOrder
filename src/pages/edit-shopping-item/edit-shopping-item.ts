@@ -39,7 +39,7 @@ export class EditShoppingItemPage {
 
   
   //update our firebase node with new item data
-  //editShoppingItem(shoppingItem: ShoppingItem){this.shoppingItemRef$.update(shoppingItem);
+  editShoppingItem(shoppingItem: ShoppingItem){this.shoppingItemRef$.update(shoppingItem);
 }
 
 
