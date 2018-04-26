@@ -51,7 +51,7 @@ selectShoppingItem(shoppingItem: ShoppingItem){
         role: 'destructive',
         handler: () => {
           //delete the current shoppingItem
-          this.shoppingListRef$.remove(shoppingItem.$key);
+          //this.shoppingListRef$.remove(shoppingItem.$key);
         }
       },
       {
