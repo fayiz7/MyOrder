@@ -4,6 +4,9 @@ import { AddShoppingPage } from '../add-shopping/add-shopping';
 import { FirebaseListObservable } from 'angularfire2/database-deprecated';
 import { ShoppingItem } from '../../models/shopping-item/shopping-item.interface';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
+import {EditShoppingItemPage} from "../edit-shopping-item/edit-shopping-item";
+
+
 @IonicPage()
 @Component({
   selector: 'page-shopping-list',
@@ -39,6 +42,7 @@ selectShoppingItem(shoppingItem: ShoppingItem){
         text: 'Edit',
         handler: () =>{
           //send the user to the editshoppingitempage and pass the key as a parameter
+          this.navCtrl.push(EditShoppingItemPage, {shoppingItemId: shoppingItem.$key});
 
         }
       },
